@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravikant Verma — Senior Full-Stack Software Engineer</title>
+<meta name="description" content="Ravikant Verma — Senior Full-Stack Software Engineer specializing in Node.js/Angular systems, microservices, and distributed backend architecture for logistics and SaaS platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="site-header__inner glass">
+    <a href="#top" class="wordmark">Ravikant<span class="wordmark__accent">.dev</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">About</a>
+      <a href="#career">Career</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+    <div class="hero__grid">
+      <div class="hero__text">
+        <p class="pill">
+          <span class="pill__dot"></span> Full-stack engineer · open to Lead Engineer roles
+        </p>
+        <h1 class="hero__headline">Building scalable systems for complex business problems.</h1>
+        <p class="hero__intro">
+          Senior Full-Stack Software Engineer with 8+ years building Node.js/Angular systems for logistics
+          and SaaS platforms — the kind of systems where a shipment, an invoice, and a customer promise all
+          have to stay in sync across a dozen moving services, on both ends of the stack.
+        </p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary"><span>View my work</span></a>
+          <a href="Ravikant_Verma_Resume.pdf" class="btn btn--glass" download><span>Download résumé</span></a>
+        </div>
+        <div class="hero__meta">
+          <a href="https://www.linkedin.com/in/ravikant-verma-8b861b159/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <span class="dot-sep">·</span>
+          <a href="mailto:ravikantverma167@gmail.com">Email</a>
+          <span class="dot-sep">·</span>
+          <span>Hisar, Haryana</span>
+        </div>
+      </div>
+
+      <div class="hero__visual" id="heroVisual">
+        <div class="hero__visual-inner" id="heroVisualInner">
+          <!-- orbiting technology assembly -->
+          <svg id="orbitLines" viewBox="0 0 440 440" role="img" aria-label="Diagram showing technologies connecting into a central backend system"></svg>
+          <div class="orbit-core">
+            <span class="orbit-core__label">System<br>core</span>
+          </div>
+          <div class="orbit-ring" id="orbitRing"><!-- tech chips injected by script.js --></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about">
+    <div class="section__label">
+      <span class="section__kicker">About</span>
+      <h2>Eight years in, still solving the same question</h2>
+    </div>
+    <div class="about__layout">
+      <aside class="about__profile glass">
+        <p class="about__profile-quote">
+          "Building scalable systems for complex business problems."
+        </p>
+        <dl class="about__facts">
+          <div><dt>Based in</dt><dd>Hisar, Haryana, India</dd></div>
+          <div><dt>Currently</dt><dd>Senior Software Engineer, Yatra Freight</dd></div>
+          <div><dt>Focus</dt><dd>Full-stack — Node.js &amp; Angular systems</dd></div>
+          <div><dt>Education</dt><dd>MCA, Chandigarh University</dd></div>
+          <div><dt>Certified</dt><dd>MongoDB Associate Developer</dd></div>
+        </dl>
+        <div class="about__stat-row">
+          <div><span class="about__stat-num">8+</span><span class="about__stat-label">years engineering</span></div>
+          <div><span class="about__stat-num">5</span><span class="about__stat-label">years in logistics</span></div>
+          <div><span class="about__stat-num">5</span><span class="about__stat-label">engineers led</span></div>
+        </div>
+      </aside>
+
+      <div class="about__body">
+        <p class="about__lede">
+          I work across the full stack — Node.js and Express services on the backend, Angular interfaces
+          on the front — with most of my ownership sitting in backend architecture, database design, and
+          the integrations that hold a distributed system together.
+        </p>
+        <p>
+          At Yatra Freight I own the systems customers and internal teams depend on daily — shipment
+          tracking, financial processing, government e-invoicing integration, and a reporting service I
+          built end to end, from the Node.js aggregation layer to its Angular-based dashboard. That means
+          being in the room for architecture and product discussions, not just implementing what's handed
+          to me.
+        </p>
+        <p>
+          I lead a team of five engineers day to day: sprint planning, code review, and making sure
+          estimates hold up against what actually ships. I care about mentoring the way I was mentored — by
+          being shown the reasoning behind a decision, not just the decision itself.
+        </p>
+
+        <ul class="focus-list">
+          <li><span class="focus-list__icon">01</span><span>Full-stack architecture (Node.js + Angular)</span></li>
+          <li><span class="focus-list__icon">02</span><span>Microservices &amp; distributed workflows</span></li>
+          <li><span class="focus-list__icon">03</span><span>Business-critical applications</span></li>
+          <li><span class="focus-list__icon">04</span><span>Database design &amp; integrations</span></li>
+          <li><span class="focus-list__icon">05</span><span>Engineering leadership &amp; mentorship</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CAREER JOURNEY ===================== -->
+  <section class="section" id="career">
+    <div class="section__label">
+      <span class="section__kicker">Career</span>
+      <h2>Career journey</h2>
+    </div>
+
+    <div class="journey" id="journey">
+      <div class="journey__rail" id="journeyRail"><!-- injected by script.js --></div>
+      <div class="journey__panel glass" id="journeyPanel"><!-- injected by script.js --></div>
+    </div>
+    <p class="edu-note">
+      <strong style="color:var(--text)">Education &amp; certification —</strong> Master of Computer Application,
+      Chandigarh University. MongoDB Associate Developer certification; MongoDB Associate Data Modeling training.
+    </p>
+  </section>
+
+  <!-- ===================== EXPERTISE (bento grid) ===================== -->
+  <section class="section" id="expertise">
+    <div class="section__label">
+      <span class="section__kicker">Expertise</span>
+      <h2>Technical expertise</h2>
+    </div>
+    <div class="bento-grid" id="bentoGrid">
+      <!-- injected by script.js -->
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section class="section section--work" id="work">
+    <div class="section__label">
+      <span class="section__kicker">Selected work</span>
+      <h2>Featured projects</h2>
+    </div>
+
+    <!-- CASE STUDY 1: YATRA FREIGHT -->
+    <article class="case-study glass" id="case-yatra">
+      <div class="case-study__header">
+        <div>
+          <p class="pill pill--muted">Primary case study · 5 years</p>
+          <h3>Yatra Freight Tracker</h3>
+          <p class="case-study__dek">
+            A B2B freight forwarding platform for FCL, LCL and air shipments — cargo tracking, carrier
+            coordination, invoicing, and freight documentation for Yatra Online Limited.
+          </p>
+        </div>
+        <a href="https://www.yatrafreight.com/" class="link-chip" target="_blank" rel="noopener">yatrafreight.com ↗</a>
+      </div>
+
+      <div class="outcome-grid" id="outcomeGrid">
+        <!-- injected by script.js -->
+      </div>
+
+      <!-- illustrative dashboard mockup -->
+      <div class="mockup-block">
+        <p class="mockup-caption">Illustrative concept of the reporting service — not an actual product screenshot.</p>
+        <div class="browser-mockup glass">
+          <div class="browser-mockup__bar">
+            <span class="browser-dot browser-dot--r"></span>
+            <span class="browser-dot browser-dot--y"></span>
+            <span class="browser-dot browser-dot--g"></span>
+            <span class="browser-mockup__url">reporting.internal / dashboard</span>
+          </div>
+          <div class="browser-mockup__body">
+            <svg id="mockupChart" viewBox="0 0 600 220" role="img" aria-label="Illustrative bar chart representing a reporting dashboard"></svg>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="diagram-label-heading">System overview — click a node</h4>
+      <p class="diagram-caption">A simplified view of the services Ravikant designed or worked directly on. Layout is illustrative; the services and integrations shown are real.</p>
+      <div class="diagram-wrap glass">
+        <svg id="yatraDiagram" viewBox="0 0 800 420" role="img" aria-label="Yatra Freight architecture diagram"></svg>
+        <div class="diagram-detail" id="yatraDetail">
+          <p class="diagram-detail__placeholder">Select a node to see what it does.</p>
+        </div>
+      </div>
+
+      <button class="accordion-toggle" id="yatraToggle" aria-expanded="false" aria-controls="yatraAccordion">
+        <span>Read the full case study</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="accordion" id="yatraAccordion" hidden>
+        <div class="accordion__step">
+          <span class="accordion__tag">Challenge</span>
+          <p>Freight logistics means keeping shipment status, financial records, and government compliance in
+            sync across FCL, LCL and air freight — each with its own document flow, and each touching internal
+            accounting and a government e-invoicing system that had to be reconciled correctly, not just
+            quickly. Reporting needs kept growing in complexity as the business added more data sources to
+            track.</p>
+        </div>
+        <div class="accordion__step">
+          <span class="accordion__tag">Approach</span>
+          <p>Ravikant took part in architecture, design, and product sessions rather than working from a
+            finished spec — pushing for a dedicated financial microservice instead of extending the existing
+            monolith further, and for a saga-pattern approach to keep multi-step financial transactions
+            consistent without a single point of failure.</p>
+        </div>
+        <div class="accordion__step">
+          <span class="accordion__tag">Technical solution</span>
+          <p>He architected and built the financial microservice for invoicing and transaction management, led
+            the integration with the government e-invoicing system and internal accounting tools, and built a
+            reporting microservice with Angular-based visualization that aggregates data from multiple databases
+            into a centralized warehouse — with output to email and Google Sheets. He also introduced Kong API
+            Gateway for centralized routing, rate limiting and authentication, added Redis caching to cut
+            response times, and led the migration from self-hosted MongoDB to MongoDB Atlas.</p>
+        </div>
+        <div class="accordion__step">
+          <span class="accordion__tag">Outcome</span>
+          <p>The financial microservice runs with far fewer reconciliation errors and at a noticeably lower
+            processing cost than the workflow it replaced, while handling a higher volume of transactions.
+            The Atlas migration and platform-wide performance work brought response times down meaningfully
+            across the product. Day to day, Ravikant leads a team of 5 engineers on this codebase — sprint
+            planning, code review, and task estimation against actual delivery.</p>
+        </div>
+        <div class="accordion__step">
+          <span class="accordion__tag">Stack</span>
+          <p class="stack-list">Node.js · Express.js · Angular · MongoDB (Atlas) · Redis · Kong API Gateway · RabbitMQ / RSMQ · Kafka · AWS (EC2, S3) · Docker · Nginx</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CASE STUDY 2: ROYO APPS -->
+    <article class="case-study case-study--secondary glass" id="case-royo">
+      <div class="case-study__header">
+        <div>
+          <p class="pill pill--muted">Secondary case study · Code Brew Labs</p>
+          <h3>Royo Apps — configurable SaaS platform</h3>
+          <p class="case-study__dek">
+            A single SaaS codebase configured to run three different business models — food delivery,
+            e-commerce, and rentals — rather than three separate builds.
+          </p>
+        </div>
+      </div>
+
+      <div class="royo-strategy" aria-hidden="true">
+        <div class="royo-node">Food delivery</div>
+        <div class="royo-node">E-commerce</div>
+        <div class="royo-node">Rentals</div>
+      </div>
+
+      <button class="accordion-toggle" id="royoToggle" aria-expanded="false" aria-controls="royoAccordion">
+        <span>Read the full case study</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="accordion" id="royoAccordion" hidden>
+        <div class="accordion__step">
+          <span class="accordion__tag">Challenge</span>
+          <p>Food delivery, e-commerce, and rental businesses share a lot of application structure — accounts,
+            listings, checkout, payments — but differ enough in workflow and terminology that a naive shared
+            codebase turns into an if/else maze fast.</p>
+        </div>
+        <div class="accordion__step">
+          <span class="accordion__tag">Approach</span>
+          <p>Ravikant led frontend development and built configuration-based strategies so each business
+            vertical could be expressed as configuration rather than a fork of the codebase — keeping one
+            platform adaptable across all three models.</p>
+        </div>
+        <div class="accordion__step">
+          <span class="accordion__tag">Technical solution</span>
+          <p>Beyond the configuration layer, he integrated more than 20 payment gateways to support the range
+            of markets and business types the platform served, and optimized the existing codebase for
+            performance as the platform's surface area grew.</p>
+        </div>
+        <div class="accordion__step">
+          <span class="accordion__tag">Outcome</span>
+          <p>User engagement improved as a result of the frontend and performance work, and the
+            configuration-based approach let the platform support new business models without a rebuild.
+            Ravikant also owned task estimation and delivery timing for this work.</p>
+        </div>
+        <div class="accordion__step">
+          <span class="accordion__tag">Stack</span>
+          <p class="stack-list">Angular · JavaScript · Node.js · 20+ third-party payment gateway integrations</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== LEADERSHIP ===================== -->
+  <section class="section" id="leadership">
+    <div class="section__label">
+      <span class="section__kicker">Leadership</span>
+      <h2>Engineering impact</h2>
+    </div>
+    <div class="leadership__grid" id="leadershipGrid">
+      <!-- injected by script.js -->
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE / CAREER ===================== -->
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section section--contact" id="contact">
+    <div class="contact-card glass">
+      <div class="hero__glow hero__glow--c" aria-hidden="true"></div>
+      <h2>Let's talk about your systems</h2>
+      <p class="contact__lede">
+        Open to Lead Engineer and Technical Lead roles where systems are genuinely hard to get right.
+      </p>
+      <div class="contact__links">
+        <a href="mailto:ravikantverma167@gmail.com" class="btn btn--primary"><span>Email Ravikant</span></a>
+        <a href="https://www.linkedin.com/in/ravikant-verma-8b861b159/" class="btn btn--glass" target="_blank" rel="noopener"><span>Connect on LinkedIn</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Ravikant Verma — Hisar, Haryana</p>
+  <p>Built with HTML, CSS &amp; JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
