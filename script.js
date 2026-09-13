@@ -128,7 +128,8 @@
     'devicon-git-plain':           '#F05032',
     'devicon-gitlab-plain':        '#FC6D26',
     'devicon-postman-plain':       '#FF6C37',
-    'devicon-jira-plain':          '#0052CC'
+    'devicon-jira-plain':          '#0052CC',
+    'observability':               '#FF9F1C'
   };
   function hexToRgba(hex, a){
     var h = hex.replace('#','');
@@ -150,7 +151,9 @@
       { icon:'devicon-docker-plain', label:'Docker' },
       { icon:'devicon-amazonwebservices-original', label:'AWS' },
       { icon:'devicon-apachekafka-original', label:'Kafka' },
-      { icon:'devicon-typescript-plain', label:'TypeScript' }
+      { icon:'devicon-typescript-plain', label:'TypeScript' },
+      { icon:'observability', label:'Observability',
+        customSvg:'<svg viewBox="0 0 24 24" width="20" height="20"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg>' }
     ];
     var frag = document.createDocumentFragment();
     techs.forEach(function(t, i){
@@ -173,7 +176,8 @@
       var brand = BRAND[t.icon] || '#6C8CFF';
       chip.style.setProperty('--brand', brand);
       chip.style.setProperty('--brand-glow', hexToRgba(brand, 0.55));
-      chip.innerHTML = '<span class="orbit-chip__icon"><i class="'+t.icon+'"></i></span><span class="orbit-chip__label">'+t.label+'</span>';
+      var iconMarkup = t.customSvg ? t.customSvg : '<i class="'+t.icon+'"></i>';
+      chip.innerHTML = '<span class="orbit-chip__icon">'+iconMarkup+'</span><span class="orbit-chip__label">'+t.label+'</span>';
       ring.appendChild(chip);
     });
     svg.appendChild(frag);
@@ -232,7 +236,8 @@
     { key:'speed', title:'Fast response times', body:'Redis caching and platform-wide performance tuning keep the product responsive as transaction volume grows.' },
     { key:'cost', title:'Lower processing cost', body:'A dedicated financial microservice replaced a heavier, error-prone workflow with a leaner, cheaper one to run.' },
     { key:'optimize', title:'Optimized operations', body:'Kong API Gateway centralizes routing, rate limiting and auth — one well-tuned layer instead of repeated logic per service.' },
-    { key:'database', title:'Well-structured, optimized database', body:'The Atlas migration paired schema and index work with better infrastructure — built to serve shipment, financial and reporting data efficiently.' }
+    { key:'database', title:'Well-structured, optimized database', body:'The Atlas migration paired schema and index work with better infrastructure — built to serve shipment, financial and reporting data efficiently.' },
+    { key:'observability', title:'Full observability', body:'Centralized logging with Graylog gives visibility into how every service is actually behaving in production — not just whether it\u2019s up.' }
   ];
   function outcomeIcon(key){
     switch(key){
@@ -246,6 +251,8 @@
         return '<svg viewBox="0 0 64 64" class="outcome-icon outcome-icon--optimize"><g class="o-gear"><circle cx="32" cy="32" r="9" class="o-gear-hub"/><g class="o-gear-teeth"><rect x="29" y="4" width="6" height="10" rx="2"/><rect x="29" y="50" width="6" height="10" rx="2"/><rect x="4" y="29" width="10" height="6" rx="2"/><rect x="50" y="29" width="10" height="6" rx="2"/><rect x="12" y="12" width="6" height="10" rx="2" transform="rotate(45 15 17)"/><rect x="46" y="42" width="6" height="10" rx="2" transform="rotate(45 49 47)"/><rect x="12" y="42" width="6" height="10" rx="2" transform="rotate(-45 15 47)"/><rect x="46" y="12" width="6" height="10" rx="2" transform="rotate(-45 49 17)"/></g></g></svg>';
       case 'database':
         return '<svg viewBox="0 0 64 64" class="outcome-icon outcome-icon--database"><ellipse cx="32" cy="14" rx="20" ry="7" class="o-db"/><path d="M12 14v18c0 3.9 9 7 20 7s20-3.1 20-7V14" class="o-db"/><path d="M12 32v18c0 3.9 9 7 20 7s20-3.1 20-7V32" class="o-db"/><path d="M14 23c0 0 4 15 18 15" class="o-db-pulse"/></svg>';
+      case 'observability':
+        return '<svg viewBox="0 0 64 64" class="outcome-icon outcome-icon--observability"><path d="M4 32s10-16 28-16 28 16 28 16-10 16-28 16S4 32 4 32Z" class="o-eye"/><circle cx="32" cy="32" r="8" class="o-pupil"/><circle cx="32" cy="32" r="15" class="o-scan"/></svg>';
       default: return '';
     }
   }
@@ -403,7 +410,7 @@
   var journey = [
     { short:'Yatra Freight', company:'Yatra Online Limited \u2014 Yatra Freight, Gurugram', role:'Senior Software Engineer', date:'Jul 2021 \u2014 Present', span:62, current:true,
       bullets:['Led and mentored a team of 5 engineers across sprint planning, code review and delivery.','Architected the financial microservice for invoicing and transactions \u2014 fewer errors, lower cost, higher efficiency.','Migrated self-hosted MongoDB to Atlas, improving performance and lowering operational cost.','Introduced Kong API Gateway for centralized routing, rate limiting and authentication.','Built a reporting microservice with Angular visualization, aggregating data into a centralized warehouse.','Led integration with a government e-invoicing system and internal accounting tools.','Added Redis caching and other performance work to keep response times fast.'],
-      skills:[{name:'Node.js',icon:'devicon-nodejs-plain'},{name:'Angular',icon:'devicon-angularjs-plain'},{name:'MongoDB Atlas',icon:'devicon-mongodb-plain'},{name:'Redis',icon:'devicon-redis-plain'},{name:'Kafka',icon:'devicon-apachekafka-original'},{name:'AWS',icon:'devicon-amazonwebservices-original'},{name:'Docker',icon:'devicon-docker-plain'}] },
+      skills:[{name:'Node.js',icon:'devicon-nodejs-plain'},{name:'Angular',icon:'devicon-angularjs-plain'},{name:'MongoDB Atlas',icon:'devicon-mongodb-plain'},{name:'Redis',icon:'devicon-redis-plain'},{name:'Kafka',icon:'devicon-apachekafka-original'},{name:'AWS',icon:'devicon-amazonwebservices-original'},{name:'Docker',icon:'devicon-docker-plain'},{name:'Graylog',icon:''}] },
     { short:'MethodHub', company:'MethodHub Software, Mohali', role:'Senior Software Engineer', date:'Oct 2020 \u2014 Jul 2021', span:9,
       bullets:['Architected an onboarding portal for agents, vendors and customers, cutting onboarding time by 35%.','Built REST API services to manage credit policies and wallets for customers and vendors.','Migrated a legacy medical-domain appointment booking system to Node.js.'],
       skills:[{name:'Node.js',icon:'devicon-nodejs-plain'},{name:'REST APIs',icon:''},{name:'SQL',icon:'devicon-mysql-plain'}] },

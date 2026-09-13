@@ -440,8 +440,15 @@ main, .site-header, .site-footer{ position: relative; z-index: 2; }
   stroke-dasharray: 22; stroke-dashoffset: 22; animation: db-flow 2.2s ease-in-out infinite; }
 @keyframes db-flow{ 0%{ stroke-dashoffset: 22; opacity: 0; } 15%{ opacity: 1; } 70%{ stroke-dashoffset: 0; opacity: 1; } 100%{ stroke-dashoffset: -22; opacity: 0; } }
 
+/* observability: scanning eye */
+.o-eye{ fill: none; stroke: var(--coral); stroke-width: 2.4; stroke-linejoin: round; }
+.o-pupil{ fill: var(--coral); }
+.o-scan{ fill:none; stroke: var(--coral); stroke-width: 1.6; opacity: 0;
+  transform-origin: 32px 32px; animation: eye-scan 2.4s ease-out infinite; }
+@keyframes eye-scan{ 0%{ transform: scale(0.6); opacity: .9; } 100%{ transform: scale(1.7); opacity: 0; } }
+
 @media (prefers-reduced-motion: reduce){
-  .o-ring, .o-check, .o-bolt, .o-speedline, .o-arrow-down, .o-gear, .o-db-pulse{ animation: none !important; opacity: 1 !important; }
+  .o-ring, .o-check, .o-bolt, .o-speedline, .o-arrow-down, .o-gear, .o-db-pulse, .o-scan{ animation: none !important; opacity: 1 !important; }
   .o-check{ stroke-dashoffset: 0; }
 }
 
